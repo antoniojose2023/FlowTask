@@ -54,6 +54,13 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:text="Alta"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@drawable/fundo_text_prioridade_media"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvCategoria" />

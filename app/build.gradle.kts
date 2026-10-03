@@ -54,4 +54,6 @@ dependencies {
     implementation("androidx.room:room-runtime:$roomVersion")
     implementation("androidx.room:room-ktx:$roomVersion") // Suporte a Coroutines
     ksp("androidx.room:room-compiler:$roomVersion") // Pro
+
+    implementation("com.google.android.material:material:1.12.0")
 }

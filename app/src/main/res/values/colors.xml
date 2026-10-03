@@ -7,6 +7,11 @@
     <color name="azul_suave">#E8ECFD</color>
     <color name="azul_claro">#DDE3FF</color>
     <color name="tinta">#101828</color>
+    <color name="fundo_tela">#EDEDF0</color>
+
+    <color name="verde">#009688</color>
+    <color name="laranja">#CDDC39</color>
+    <color name="azul50">#7E7EE4</color>
 
 
 </resources>
