@@ -52,8 +52,12 @@ dependencies {
     val roomVersion = "2.6.1" // Use a versão mais recente estável
 
     implementation("androidx.room:room-runtime:$roomVersion")
-    implementation("androidx.room:room-ktx:$roomVersion") // Suporte a Coroutines
-    ksp("androidx.room:room-compiler:$roomVersion") // Pro
+    implementation("androidx.room:room-ktx:$roomVersion")
+    ksp("androidx.room:room-compiler:$roomVersion")
 
     implementation("com.google.android.material:material:1.12.0")
+}
+
+ksp {
+    arg("room.generateKotlin", "true")
 }

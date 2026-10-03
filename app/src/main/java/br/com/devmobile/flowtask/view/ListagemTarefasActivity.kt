@@ -1,16 +1,17 @@
-package br.com.devmobile.flowtask
+package br.com.devmobile.flowtask.view
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import br.com.devmobile.flowtask.databinding.ActivityAdicionarTarefasBinding
+import br.com.devmobile.flowtask.R
+import br.com.devmobile.flowtask.databinding.ActivityListagemTarefasBinding
 
-class AdicionarTarefasActivity : AppCompatActivity() {
+class ListagemTarefasActivity : AppCompatActivity() {
 
-    private val binding by lazy{ ActivityAdicionarTarefasBinding.inflate( layoutInflater ) }
-
+    private val binding by lazy{ ActivityListagemTarefasBinding.inflate(layoutInflater) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -21,9 +22,10 @@ class AdicionarTarefasActivity : AppCompatActivity() {
             insets
         }
 
-
-
-
+        binding.floatingActionButtonAddTarefas.setOnClickListener {
+             startActivity(Intent(this, AdicionarTarefasActivity::class.java))
+             overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out )
+        }
 
     }
 }

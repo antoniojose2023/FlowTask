@@ -1,16 +1,18 @@
-package br.com.devmobile.flowtask
+package br.com.devmobile.flowtask.view
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import br.com.devmobile.flowtask.databinding.ActivityListagemTarefasBinding
+import br.com.devmobile.flowtask.R
+import br.com.devmobile.flowtask.databinding.ActivitySplashScreenBinding
 
-class ListagemTarefasActivity : AppCompatActivity() {
-
-    private val binding by lazy{ ActivityListagemTarefasBinding.inflate(layoutInflater) }
+class SplashScreenActivity : AppCompatActivity() {
+    private val binding by lazy{ ActivitySplashScreenBinding.inflate( layoutInflater ) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -21,10 +23,18 @@ class ListagemTarefasActivity : AppCompatActivity() {
             insets
         }
 
-        binding.floatingActionButtonAddTarefas.setOnClickListener {
-             startActivity(Intent(this, AdicionarTarefasActivity::class.java))
-             overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out )
-        }
+        carregaTelaInicial()
+    }
+
+
+    fun carregaTelaInicial(){
+
+        Handler(Looper.getMainLooper()).postDelayed({
+
+             startActivity(Intent(this, ListagemTarefasActivity::class.java))
+             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+
+        }, 2000)
 
     }
 }
