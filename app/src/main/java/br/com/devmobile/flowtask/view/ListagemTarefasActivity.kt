@@ -48,6 +48,12 @@ class ListagemTarefasActivity : AppCompatActivity() {
              overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out )
         }
 
+        tarefaAdapter.onClickTarefa = { tarefa ->
+            val intent = Intent(this, EdicaoTarefaActivity::class.java)
+            intent.putExtra("tarefa", tarefa)
+            startActivity(intent)
+        }
+
     }
 
     override fun onStart() {

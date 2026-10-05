@@ -23,6 +23,10 @@ class AdicionarTarefasActivity : AppCompatActivity() {
     private var prioridade = ""
     private  var tarefa: Tarefa = Tarefa()
 
+    private val tarefaRepository by lazy{
+        TarefaRepository(this)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -33,8 +37,8 @@ class AdicionarTarefasActivity : AppCompatActivity() {
             insets
         }
 
-        val tarefaRepository by lazy{
-            TarefaRepository(this)
+        binding.ivVoltar.setOnClickListener {
+             finish()
         }
 
         binding.chipGrupo.setOnCheckedStateChangeListener { group, idChipPrioridade ->

@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.devmobile.flowtask.databinding.ItemTarefaBinding
 import br.com.devmobile.flowtask.datalocal.Tarefa
 
-class TarefaAdapter(val onClickTarefa: (Tarefa)-> Unit = {}): RecyclerView.Adapter<TarefaAdapter.TarefaViewHolder>() {
+class TarefaAdapter(var onClickTarefa: (Tarefa)-> Unit = {}): RecyclerView.Adapter<TarefaAdapter.TarefaViewHolder>() {
 
     private var tarefas = mutableListOf<Tarefa>()
 

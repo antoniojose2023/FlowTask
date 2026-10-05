@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.AdicionarTarefasActivity"
+    tools:context=".view.EdicaoTarefaActivity"
     android:background="@color/fundo_tela">
 
     <TextView
@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Nova Tarefa"
+        android:text="Edição Tarefa"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/ivVoltar"
@@ -139,6 +139,7 @@
         android:layout_marginTop="8dp"
         android:textSize="18sp"
         android:text="Hora"
+        android:maxLines="1"
         android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/txtDescricao" />
@@ -226,13 +227,28 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btSalvaTarefa"
+        android:id="@+id/btEditaTarefa"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="Atualizar Tarefa"
+        android:backgroundTint="@color/azul"
+        app:layout_constraintBottom_toTopOf="@+id/btExcluir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btExcluir"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:text="Adicionar Tarefa"
+        android:backgroundTint="@color/vermelho"
+        android:text="Exlcuir"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

@@ -7,8 +7,8 @@ import br.com.devmobile.flowtask.view.ListagemTarefasActivity
 
 class TarefaRepository(context: Context) {
 
-    val dbTarefa = DatabaseRoom.getInstance( context )
-    val tarefaDao = dbTarefa.tarefaDao()
+    private val dbTarefa = DatabaseRoom.getInstance( context )
+    private val tarefaDao = dbTarefa.tarefaDao()
 
     suspend fun salvar(tarefa: Tarefa): Long{
           return tarefaDao.salvar( tarefa )
